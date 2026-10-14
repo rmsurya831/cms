@@ -20,7 +20,7 @@ export default function Topbar() {
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-48 rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-blue-500"
+          className="w-48 rounded-lg text-black border border-gray-200 px-3 py-2 text-sm outline-none focus:border-blue-500"
         />
 
         <button

@@ -93,9 +93,9 @@ export default function Leads() {
           {showForm && (
             <form
               onSubmit={handleSubmit}
-              className="mt-6 grid gap-4 rounded-xl border bg-white p-5 sm:grid-cols-2"
+              className="mt-6 grid gap-4 rounded-xl border bg-white p-5 sm:grid-cols-2 text-black"
             >
-              <h2 className="text-lg font-semibold sm:col-span-2">
+              <h2 className="text-lg font-semibold sm:col-span-2 text-black">
                 {editingId !== null ? "Edit Lead" : "Add Lead"}
               </h2>
 
@@ -104,7 +104,7 @@ export default function Leads() {
                 placeholder="Name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <input
                 required
@@ -112,21 +112,21 @@ export default function Leads() {
                 placeholder="Email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <input
                 required
                 placeholder="Phone"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <input
                 required
                 placeholder="Company"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
 
               <select
@@ -134,7 +134,7 @@ export default function Leads() {
                 onChange={(e) =>
                   setForm({ ...form, status: e.target.value as Lead["status"] })
                 }
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               >
                 <option value="New">New</option>
                 <option value="Contacted">Contacted</option>
@@ -152,7 +152,7 @@ export default function Leads() {
                     setEditingId(null);
                     setForm(emptyForm);
                   }}
-                  className="rounded-lg border px-5 py-2"
+                  className="rounded-lg border px-5 py-2 text-black"
                 >
                   Cancel
                 </button>
@@ -165,7 +165,7 @@ export default function Leads() {
               placeholder="Search leads..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="mb-5 w-full rounded-lg border p-3"
+              className="mb-5 w-full rounded-lg border p-3 text-black"
             />
 
             <div className="overflow-x-auto">
@@ -182,7 +182,7 @@ export default function Leads() {
                 </thead>
                 <tbody>
                   {filteredLeads.map((lead) => (
-                    <tr key={lead.id} className="border-t">
+                    <tr key={lead.id} className="border-t text-black">
                       <td className="p-3">{lead.name}</td>
                       <td className="p-3">{lead.email}</td>
                       <td className="p-3">{lead.phone}</td>

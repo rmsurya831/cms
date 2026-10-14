@@ -38,11 +38,11 @@ export default function Settings() {
             className="mt-6 max-w-2xl space-y-6 rounded-xl border bg-white p-6"
           >
             <section>
-              <h2 className="mb-4 text-lg font-semibold">Profile Information</h2>
+              <h2 className="mb-4 text-lg font-semibold text-black">Profile Information</h2>
 
               <div className="space-y-4">
                 <div>
-                  <label className="mb-2 block text-sm font-medium">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Full Name
                   </label>
                   <input
@@ -52,12 +52,12 @@ export default function Settings() {
                       setForm({ ...form, name: e.target.value });
                       setMessage("");
                     }}
-                    className="w-full rounded-lg border p-3"
+                    className="w-full rounded-lg border p-3 text-black"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Email Address
                   </label>
                   <input
@@ -68,12 +68,12 @@ export default function Settings() {
                       setForm({ ...form, email: e.target.value });
                       setMessage("");
                     }}
-                    className="w-full rounded-lg border p-3"
+                    className="w-full rounded-lg border p-3 text-black"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-sm font-medium">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Company Name
                   </label>
                   <input
@@ -83,14 +83,14 @@ export default function Settings() {
                       setForm({ ...form, company: e.target.value });
                       setMessage("");
                     }}
-                    className="w-full rounded-lg border p-3"
+                    className="w-full rounded-lg border p-3 text-black"
                   />
                 </div>
               </div>
             </section>
 
             <section className="border-t pt-5">
-              <h2 className="mb-4 text-lg font-semibold">Preferences</h2>
+              <h2 className="mb-4 text-lg font-semibold text-black">Preferences</h2>
 
               <label className="flex items-center justify-between gap-4 py-3">
                 <span>
@@ -108,7 +108,7 @@ export default function Settings() {
                     setForm({ ...form, notifications: e.target.checked });
                     setMessage("");
                   }}
-                  className="h-4 w-4"
+                  className="h-4 w-4 text-black"
                 />
               </label>
 

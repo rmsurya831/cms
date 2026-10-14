@@ -92,9 +92,9 @@ export default function Activities() {
           {showForm && (
             <form
               onSubmit={handleSubmit}
-              className="mt-6 grid gap-4 rounded-xl border bg-white p-5 sm:grid-cols-2"
+              className="mt-6 grid gap-4 rounded-xl border bg-white p-5 sm:grid-cols-2 "
             >
-              <h2 className="text-lg font-semibold sm:col-span-2">
+              <h2 className="text-lg font-semibold sm:col-span-2 text-black">
                 {editingId !== null ? "Edit Activity" : "Add Activity"}
               </h2>
 
@@ -103,7 +103,7 @@ export default function Activities() {
                 placeholder="Activity title"
                 value={form.title}
                 onChange={(e) => setForm({ ...form, title: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <input
                 required
@@ -112,21 +112,21 @@ export default function Activities() {
                 onChange={(e) =>
                   setForm({ ...form, customer: e.target.value })
                 }
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <input
                 required
                 type="date"
                 value={form.date}
                 onChange={(e) => setForm({ ...form, date: e.target.value })}
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               />
               <select
                 value={form.type}
                 onChange={(e) =>
                   setForm({ ...form, type: e.target.value as Activity["type"] })
                 }
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               >
                 <option value="Call">Call</option>
                 <option value="Meeting">Meeting</option>
@@ -140,7 +140,7 @@ export default function Activities() {
                     status: e.target.value as Activity["status"],
                   })
                 }
-                className="rounded-lg border p-3"
+                className="rounded-lg border p-3 text-black"
               >
                 <option value="Pending">Pending</option>
                 <option value="Completed">Completed</option>
@@ -157,7 +157,7 @@ export default function Activities() {
                     setEditingId(null);
                     setForm(emptyForm);
                   }}
-                  className="rounded-lg border px-5 py-2"
+                  className="rounded-lg border px-5 py-2 text-black"
                 >
                   Cancel
                 </button>
@@ -170,7 +170,7 @@ export default function Activities() {
               placeholder="Search activities..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="mb-5 w-full rounded-lg border p-3"
+              className="mb-5 w-full rounded-lg border p-3  text-black"
             />
 
             <div className="overflow-x-auto">
@@ -187,7 +187,7 @@ export default function Activities() {
                 </thead>
                 <tbody>
                   {filtered.map((activity) => (
-                    <tr key={activity.id} className="border-t">
+                    <tr key={activity.id} className="border-t text-black">
                       <td className="p-3">{activity.title}</td>
                       <td className="p-3">{activity.customer}</td>
                       <td className="p-3">{activity.date}</td>
